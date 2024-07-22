@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
       <ModeToggle />
-      <WelcomeCard />
-      <Button>Brooooooo</Button>
+      <WelcomeCard /><br />
+      <Button className='w-96'>Press the button</Button>
     </div>
   )
 }

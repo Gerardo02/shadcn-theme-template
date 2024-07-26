@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  margin: 10px;
+}
 
 @layer base {
   :root {

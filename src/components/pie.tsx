@@ -17,9 +17,11 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
+  ChartLegend,
+  ChartLegendContent
 } from "@/components/ui/chart"
 const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
+  { browser: "brother", visitors: 275, fill: "var(--color-brother)" },
   { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
   { browser: "firefox", visitors: 287, fill: "var(--color-firefox)" },
   { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
@@ -30,8 +32,8 @@ const chartConfig = {
   visitors: {
     label: "Visitors",
   },
-  chrome: {
-    label: "Chrome",
+  brother: {
+    label: "Brother",
     color: "hsl(var(--chart-1))",
   },
   safari: {
@@ -80,6 +82,7 @@ export function PieChartComp() {
               innerRadius={60}
               strokeWidth={5}
             >
+              
               <Label
                 content={({ viewBox }) => {
                   if (viewBox && "cx" in viewBox && "cy" in viewBox) {
@@ -110,6 +113,10 @@ export function PieChartComp() {
                 }}
               />
             </Pie>
+              <ChartLegend
+                content={<ChartLegendContent nameKey="browser" />}
+                className="-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
+              />
           </PieChart>
         </ChartContainer>
       </CardContent>

@@ -11,11 +11,14 @@ const WelcomeCard = () => {
     return ( 
         <Card className="w-96">
             <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
+                <CardTitle>Titulo</CardTitle>
+                <CardDescription>Descripcion de las cartitas</CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <p>Card Content 1</p>
+                <p>Card Content 2</p>
+                <p>Card Content 3</p>
+                <p>Card Content 4</p>
             </CardContent>
             <CardFooter>
                 <p>Card Footer</p>

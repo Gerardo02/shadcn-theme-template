@@ -18,21 +18,21 @@ function App() {
   const [sliderNumberIva, setSliderNumberIva] = useState(0);
 
   useEffect(() => {
-    setCalcNumber(1000 + (sliderNumber * 1.62) + (sliderNumberIva * 3.1416));
+    setCalcNumber(1000 + (sliderNumber * 1) + (sliderNumberIva * 3));
   }, [sliderNumber, sliderNumberIva])
 
   return (
     <>
-      <div className='flex flex-wrap space-x-4'>
-          <div className='flex-col space-y-4'>
+      <div className='flex flex-wrap justify-center sm:justify-normal'>
+          <div className='flex-col space-y-4 flex-grow sm:flex-none'>
             <ModeToggle />
             <WelcomeCard />
-            <Button className='w-96'>Press the button</Button>
+            <Button className='sm:w-96'>Press the button</Button>
           </div>
           
           <ResizableDemo />
           
-          <div className='w-96'>
+          <div className='w-80 sm:w-96 flex-grow sm:flex-none'>
             <HoverCard>
               <HoverCardTrigger asChild>
                 <h1 className='text-4xl max-w-96 text-center'>${calcNumber.toFixed(4)}</h1>
@@ -43,6 +43,7 @@ function App() {
             </HoverCard>
             <Slider defaultValue={[sliderNumber]} max={100} step={1} onValueChange={(n) => setSliderNumber(n[0])} />{sliderNumber}
             <Slider defaultValue={[sliderNumber]} max={100} step={1} onValueChange={(n) => setSliderNumberIva(n[0])} />{sliderNumberIva}
+            <Slider defaultValue={[sliderNumber]} max={100} step={1} />
           </div>
           
           <PieChartComp />

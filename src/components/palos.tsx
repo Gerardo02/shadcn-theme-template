@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts"
 
 import {
   Card,
@@ -184,12 +184,17 @@ export function PalosChart() {
             }}
           >
             <CartesianGrid vertical={false} />
+            <YAxis 
+              tickLine={true}
+              axisLine={true}
+              tickMargin={4}
+            />
             <XAxis
               dataKey="date"
-              tickLine={false}
-              axisLine={false}
+              tickLine={true}
+              axisLine={true}
               tickMargin={8}
-              minTickGap={32}
+              minTickGap={96}
               tickFormatter={(value) => {
                 const date = new Date(value)
                 return date.toLocaleDateString("en-US", {

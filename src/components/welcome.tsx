@@ -9,7 +9,7 @@ import {
 
 const WelcomeCard = () => {
     return ( 
-        <Card className="w-96">
+        <Card className="sm:w-96">
             <CardHeader>
                 <CardTitle>Titulo</CardTitle>
                 <CardDescription>Descripcion de las cartitas</CardDescription>

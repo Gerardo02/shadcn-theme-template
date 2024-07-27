@@ -8,7 +8,7 @@ export function ResizableDemo() {
     return (
       <ResizablePanelGroup
         direction="horizontal"
-        className="max-w-96 rounded-lg border"
+        className="rounded-lg border w-80 sm:w-96 flex flex-grow sm:flex-none sm:max-w-96"
       >
         <ResizablePanel defaultSize={50} minSize={20} maxSize={80}>
           <div className="flex h-[200px] items-center justify-center p-6">

@@ -60,7 +60,7 @@ export function PieChartComp() {
   }, [])
 
   return (
-    <Card className="flex flex-col max-w-96">
+    <Card className="flex flex-col w-80 sm:w-96 flex-grow sm:flex-none">
       <CardHeader className="items-center pb-0">
         <CardTitle>Pie Chart - Donut with Text</CardTitle>
         <CardDescription>January - June 2024</CardDescription>

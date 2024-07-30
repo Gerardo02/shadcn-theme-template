@@ -25,6 +25,7 @@ const chartData = [
   { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
   { browser: "firefox", visitors: 287, fill: "var(--color-firefox)" },
   { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
+  { browser: "compa", visitors: 312, fill: "var(--color-compa)" },
   { browser: "other", visitors: 190, fill: "var(--color-other)" },
 ]
 
@@ -47,6 +48,10 @@ const chartConfig = {
   edge: {
     label: "Edge",
     color: "hsl(var(--chart-4))",
+  },
+  compa: {
+    label: "Compa",
+    color: "hsl(var(--chart-6))",
   },
   other: {
     label: "Other",
@@ -113,10 +118,10 @@ export function PieChartComp() {
                 }}
               />
             </Pie>
-              <ChartLegend
-                content={<ChartLegendContent nameKey="browser" />}
-                className="-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
-              />
+            <ChartLegend
+              content={<ChartLegendContent nameKey="browser" />}
+              className="-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
+            />
           </PieChart>
         </ChartContainer>
       </CardContent>

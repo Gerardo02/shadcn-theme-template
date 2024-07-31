@@ -35,7 +35,7 @@ function App() {
           <div className='w-80 sm:w-96 flex-grow sm:flex-none'>
             <HoverCard>
               <HoverCardTrigger asChild>
-                <h1 className='text-4xl max-w-96 text-center'>${calcNumber.toFixed(4)}</h1>
+                <h1 className='text-4xl sm:max-w-96 text-center'>${calcNumber.toFixed(4)}</h1>
               </HoverCardTrigger>
               <HoverCardContent className="w-80">
                 <p>Numero exacto: ${calcNumber}</p>
